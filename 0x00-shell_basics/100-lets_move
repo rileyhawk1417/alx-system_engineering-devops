@@ -1,2 +1,2 @@
 #!/bin/bash
-ls | cp -b [[:upper:]]* /tmp/u
+ls | cp -b [A-Z]* /tmp/u
