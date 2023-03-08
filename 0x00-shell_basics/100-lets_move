@@ -1,2 +1,2 @@
 #!/bin/bash
-ls | cp -b [A-Z]* /tmp/u
+ls | mv [A-Z]* /tmp/u
