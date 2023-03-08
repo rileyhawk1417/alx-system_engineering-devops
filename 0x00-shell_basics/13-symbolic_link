@@ -1,2 +1,2 @@
 #!/bin/bash
-touch __ls__ "$(ln -s __ls__ /bin/ls)" "$(chmod u+x __ls__)"
+touch __ls__ "$(ln -s /bin/ls __ls__)" "$(chmod u+x __ls__)"
