@@ -1,2 +1,2 @@
 #!/bin/bash
-find hello -user guillaume "$(chown root hello)"
+chown betty --from=guillaume hello
