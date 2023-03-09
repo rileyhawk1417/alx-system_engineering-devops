@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ug= o+rx hello
+chmod 007 hello
