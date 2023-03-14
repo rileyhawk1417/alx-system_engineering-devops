@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /etc/ssh/sshd_config | grep --extended-regexp --ignore-case `{0-9}`
+grep --ignore "^[a-z]" /etc/ssh/ssh_config

@@ -1,2 +1,2 @@
 #!/bin/bash
-find ./* -type -f -maxdepth 0 -name "*.*" | head -n 10
+ls -t1 | head -n 10
