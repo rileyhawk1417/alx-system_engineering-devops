@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Sort the data out by category
+# Instead of writing everything in awk. Just pipe it out.
+# Sorts the ip addresses by occurence along with http status codes
+# The occurence is on the left side
+awk '{print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn

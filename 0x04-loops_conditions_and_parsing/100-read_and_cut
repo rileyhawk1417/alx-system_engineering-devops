@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Displays contents of /etc/passwd
+# Its filtered to only show:
+# username, user id, user home path
+
+while read -r passwd
+do
+  echo "$passwd" | cut -d ':' -f1,3,6
+#NOTE: This is meant to output the result
+done < "/etc/passwd"

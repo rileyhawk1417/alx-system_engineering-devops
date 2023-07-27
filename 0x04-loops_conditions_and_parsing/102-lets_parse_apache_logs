@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This just grabs the ip addresses from the log file
+# This uses awk to print a range of values
+
+awk '{print $1 " " $9}' apache-access.log
