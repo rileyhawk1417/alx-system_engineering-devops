@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for num in {0..10}
+do 
+  if [ "$num" != 20 ]; then
+    echo "Best School"
+  fi
+done

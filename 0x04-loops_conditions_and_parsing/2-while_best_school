@@ -1,0 +1,8 @@
+#!/bin/bash
+init=0
+while [ $init -le 9 ]
+do 
+  echo "Best School"
+  init=$((init + 1))
+done
+

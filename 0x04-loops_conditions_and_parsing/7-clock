@@ -1,0 +1,23 @@
+#!/bin/bash
+
+count=0
+hour=0
+
+while [ "$count" -le 60 ]
+do
+  if [ "$hour" != 13 ]; then
+    if [ "$count" == 60 ]; then
+      echo "Hour: $((hour++))"
+      count=0
+    else
+      echo "$count"
+    fi
+  else
+    if [ "$count" == 60 ]; then
+      echo "$((count - 1 ))"
+    else
+      echo "$count"
+    fi
+  fi
+  count=$((count + 1))
+done
