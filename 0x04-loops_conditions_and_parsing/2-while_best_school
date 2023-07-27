@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Simply Prints Best School 10 Times
 init=0
 while [ $init -le 9 ]
 do 

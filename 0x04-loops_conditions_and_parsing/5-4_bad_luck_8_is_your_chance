@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Simply Prints Best School 10 Times
+# On the 4th time it prints bad luck
+# On the 8th time it prints good luck
 
 count=1
 

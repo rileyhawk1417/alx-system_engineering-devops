@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Prints the game fizzbuzz
 
 for num in {1..100}
 do

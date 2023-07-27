@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Simply Prints 1 - 20
+# On the 4th number it prints bad luck from China
+# On the 9th number it prints bad luck from Japan
+# On the 17th number it prints bad luck from Italy
 
 count=1
 

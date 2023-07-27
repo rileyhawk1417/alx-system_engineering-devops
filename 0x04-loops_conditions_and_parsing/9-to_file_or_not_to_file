@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# The script checks a file using the following flags:
 #NOTE: -e flag checks if file is present
 #-s flag checks if file is empty
 #-f flag checks if file is a regular one

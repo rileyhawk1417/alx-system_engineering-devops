@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Simply Prints Best School 10 Times
+# Then prints Hi on the 8th time
 
 count=0
 
