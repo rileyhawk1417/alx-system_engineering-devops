@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Get the bash process from ps using grep
+
+ps -aux | grep bash

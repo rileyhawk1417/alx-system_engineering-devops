@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# List the current process running (mainly the terminal process)
+
+echo $$

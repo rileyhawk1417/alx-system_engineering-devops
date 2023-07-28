@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# List the proceses in a long format & make it readable
+
+ps -auxf

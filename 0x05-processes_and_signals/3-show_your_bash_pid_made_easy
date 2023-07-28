@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Get the terminal process using pgrep with the name
+
+pgrep zsh -l
