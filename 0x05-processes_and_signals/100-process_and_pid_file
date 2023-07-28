@@ -8,7 +8,7 @@
 5. Then print a message when given a SIGQUIT
 '
 
-kill_quit() {
+terminator() {
   rm /var/run/myscript.pid
   exit
 }
@@ -21,7 +21,7 @@ do
   sleep 2
   trap 'echo "Y U no love me?!"' SIGINT
   trap 'echo "I hate the kill command && terminator"' SIGTERM
-  trap 'kill_quit' SIGQUIT
+  trap 'terminator' SIGQUIT
 done
 
 
