@@ -3,7 +3,7 @@
 # Mainly its just grabbing specific values
 # from the file then printing them out in a sentence
 
-while IFS=':' read -r username gid home shell uid password info;
+while IFS=':' read -r username password uid gid info home shell;
 do
   echo "The user $username is part of the $gid,"\
     "lives in $home and rides $shell."\

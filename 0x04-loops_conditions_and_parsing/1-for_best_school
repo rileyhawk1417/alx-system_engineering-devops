@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Simply Prints Best School 10 Times
 
-for num in {0..10}
+for num in {0..9}
 do 
   if [ "$num" != 20 ]; then
     echo "Best School"
