@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Write into a file indefinetely & pause every 2s
+
+while true
+do
+  echo "I am alive!" >> /tmp/my_process
+done
