@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 # This script will perform a series of actions
-: '
-1. Create the file with the pid of the current process
-2. Print to the screen & sleep for 2secs
-3. Then print a message when given a SIGINT
-4. Then print a message when given a SIGTERM
-5. Then print a message when given a SIGQUIT
-'
+# 1. Create the file with the pid of the current process
+# 2. Print to the screen & sleep for 2secs
+# 3. Then print a message when given a SIGINT
+# 4. Then print a message when given a SIGTERM
+# 5. Then print a message when given a SIGQUIT
 
 terminator() {
   rm /var/run/myscript.pid
