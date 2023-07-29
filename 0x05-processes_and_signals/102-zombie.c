@@ -25,7 +25,7 @@ int infinite_while(void)
 int main(void)
 {
 pid_t pid;
-int counter = 0;
+char counter = 0;
 
 while (counter < 5)
 {
@@ -35,7 +35,6 @@ while (counter < 5)
 		printf("Zombie process created, PID: %d\n", pid);
 		sleep(1);
 		counter++;
-
 	}
 	else
 		exit(0);
