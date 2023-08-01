@@ -20,3 +20,4 @@ your regex samples
     - `.` includes characters found in the range.
     - `$` marks the end of the range.
 7. Only search for capital letters `[A-Z]`
+100. Its a long regex command combining alot of the previous techniques
