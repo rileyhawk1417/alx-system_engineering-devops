@@ -1,18 +1,17 @@
-
 #!/usr/bin/env bash
 # Install ngninx server & write page then restart it
 # Configure redirection to a random page
 # Then configure the 404 page
-apt-get update -y
-apt-get install nginx -y
+sudo apt-get update -y
+sudo apt-get install nginx -y
 
-echo "Hello World!" > /var/www/html/index.html
+sudo echo "Hello World!" > /var/www/html/index.html
 new_string="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.duckduckgo.com permanent";
-sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
 
-echo "Ceci n'est pas une page" > /var/www/html/404.html
+sudo echo "Ceci n'est pas une page" > /var/www/html/404.html
 new_string="root /var/www/html;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var/www\/html;\n\t\tinternal;\n\t}"
-sed -i "s/root /var/www/html;/$new_string/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/root /var/www/html;/$new_string/" /etc/nginx/sites-enabled/default
 
-service nginx restart
+sudo service nginx restart
 
