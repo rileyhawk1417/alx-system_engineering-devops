@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Install ngninx server & write page then restart it
+# Configure redirection to a random page
+apt-get update -y
+apt-get install nginx -y
+
+echo "Hello World!" > /var/www/html/index.html
+new_string="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.duckduckgo.com permanent";
+sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
+
+service nginx restart
