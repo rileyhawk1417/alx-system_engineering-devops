@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # This just gives the apache service a full restart
-service apache2 --full-restart
+service apache2 restart
