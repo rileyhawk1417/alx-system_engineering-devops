@@ -16,6 +16,6 @@ sudo sed -i "s/listen 80 default_server;/$error_/" /etc/nginx/sites-enabled/defa
 redirect_="server_name _;\n\tadd_header X-Served-By \$Hostname;\n\trewrite ^\/redirect_me https:\/\/www.duckduckgo.com permanent;"
 sudo sed -i "s/server_name _;/$redirect_/" /etc/nginx/sites-enabled/default
 
-service nginx restart
+sudo service nginx restart
 
 
