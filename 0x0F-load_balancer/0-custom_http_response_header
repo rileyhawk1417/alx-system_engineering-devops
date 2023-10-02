@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # Configure a web server with a custom Header response
+# WARN: Have not configured sed to replace existing text.
+# For example if there's already a 404 configured, it won't replace the text
 
-sudo apt-get update;
-sudo apt-get install nginx -y;
+sudo apt-get update
+sudo apt-get install nginx -y
 
 # Configure root page
 echo "Hello World!" | sudo tee /var/www/html/index.html
