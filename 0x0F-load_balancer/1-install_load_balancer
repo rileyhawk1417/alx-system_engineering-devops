@@ -3,19 +3,19 @@
 # Install and configure a HAProxy load balancer
 # The haproxy will use round robin algorithm
 
-sudo apt-get update;
-sudo apt-get install haproxy -y;
+sudo apt-get update
+sudo apt-get install haproxy -y
 
 ha_config=\
 "
-frontend http
-  bind *:80
-  mode http
-  default_backend seanriley_backend
+frontend seanriley_frontend
+	bind *:80
+	mode http
+	default_backend seanriley_backend
 backend seanriley_backend
-  balance roundrobin
-  server 388596-web-01 100.26.221.74:80 check
-  server 388596-web-02 52.87.254.201:80 check
+	balance roundrobin
+	server 388596-web-01 100.26.221.74:80 check
+	server 388596-web-02 52.87.254.201:80 check
 "
 
 echo "$ha_config" | sudo tee -a /etc/haproxy/haproxy.cfg
