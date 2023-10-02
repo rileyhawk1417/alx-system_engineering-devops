@@ -15,7 +15,7 @@ provider => shell,
 }
 
 
-exec {'sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/www.duckduckgo.com permanent;" /etc/nginx/sites-enabled/default':
+exec {"sudo sed -i 's/listen 80 default_server;/listen 80 default_server;\\n\\tlocation \/redirect_me {\\n\\t\\treturn 301 https:\/\/www.duckduckgo.com\/;\\n\\t}/' /etc/nginx/sites-available/default":
 provider => shell,
 }
 
