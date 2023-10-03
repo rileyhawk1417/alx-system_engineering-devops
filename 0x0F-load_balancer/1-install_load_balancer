@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Install and configure a HAProxy load balancer
 # The haproxy will use round robin algorithm
 
