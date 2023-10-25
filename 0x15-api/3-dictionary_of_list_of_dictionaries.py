@@ -10,28 +10,27 @@ import requests as req
 import sys
 
 if __name__ == "__main__":
-    employee_id = sys.argv[1]
     api_endpoint = "https://jsonplaceholder.typicode.com/{}"
-    users_endpoint = "{}/{}".format(api_endpoint.format("users"), employee_id)
+    employee_list = req.get(api_endpoint.format('users')).json()
     todos_endpoint = api_endpoint.format("todos")
-    user_todos = "{}?userId={}".format(todos_endpoint, employee_id)
-    employee_list = req.get(users_endpoint)
-    employee_name = employee_list.json().get("username")
 
-    employee_todo = req.get(user_todos)
-    todo_list = employee_todo.json()
     employee_todo_list = []
-
     employee_dict = {}
 
-    for todo in todo_list:
-        employee_todo_list.append({
-            "username": employee_name,
-            "task": todo.get('title'),
-            "completed": todo.get('completed'),
-        })
+    for user in employee_list:
+        employee_id = str(user.get('id'))
+        username = user.get('username')
+        user_todos = "{}?userId={}".format(todos_endpoint, employee_id)
+        employee_todos = req.get(user_todos).json()
 
-    employee_dict[employee_id] = employee_todo_list
+        for todo in employee_todos:
+            employee_todo_list.append({
+                "username": username,
+                "task": todo.get('title'),
+                "completed": todo.get('completed'),
+            })
 
-    with open("todo_all_employees.json", 'a') as file:
+        employee_dict[employee_id] = employee_todo_list
+
+    with open("todo_all_employees.json", 'w') as file:
         json.dump(employee_dict, file)
