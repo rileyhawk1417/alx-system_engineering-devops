@@ -33,5 +33,5 @@ if __name__ == "__main__":
 
     employee_dict[employee_id] = employee_todo_list
 
-    with open("todo_all_employees.json", 'w') as file:
+    with open("todo_all_employees.json", 'a') as file:
         json.dump(employee_dict, file)
