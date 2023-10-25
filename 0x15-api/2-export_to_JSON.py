@@ -3,8 +3,9 @@
 Fetch user id from API, then match it with the todos
 After that write to a json file
 """
-import requests as req
+
 import json
+import requests as req
 import sys
 
 if __name__ == "__main__":
