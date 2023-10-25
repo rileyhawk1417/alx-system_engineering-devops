@@ -17,7 +17,7 @@ if __name__ == "__main__":
     todos_endpoint = api_endpoint.format("todos")
     user_todos = "{}?userId={}".format(todos_endpoint, employee_id)
     employee_list = req.get(users_endpoint)
-    employee_name = employee_list.json().get("name")
+    employee_name = employee_list.json().get("username")
 
     employee_todo = req.get(user_todos)
     todo_list = employee_todo.json()
