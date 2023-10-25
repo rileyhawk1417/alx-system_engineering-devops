@@ -14,7 +14,6 @@ if __name__ == "__main__":
     employee_list = req.get(api_endpoint.format('users')).json()
     todos_endpoint = api_endpoint.format("todos")
 
-    employee_todo_list = []
     employee_dict = {}
 
     for user in employee_list:
@@ -23,6 +22,7 @@ if __name__ == "__main__":
         user_todos = "{}?userId={}".format(todos_endpoint, employee_id)
         employee_todos = req.get(user_todos).json()
 
+        employee_todo_list = []
         for todo in employee_todos:
             employee_todo_list.append({
                 "username": username,
