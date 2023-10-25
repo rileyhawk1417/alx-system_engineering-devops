@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+Fetch user id from API, then match it with the todos
+"""
 import requests as req
 import sys
 
