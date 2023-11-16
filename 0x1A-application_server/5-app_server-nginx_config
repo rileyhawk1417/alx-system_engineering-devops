@@ -1,0 +1,46 @@
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+        add_header X-Served-By 388596-web-01;
+	root    /data/web_static/current;
+	index   index.html index.htm;
+	location /hbnb_static {
+		alias /data/web_static/current;
+		try_files $uri $uri/ /index.html;
+	}
+
+	location /airbnb-onepage {
+		proxy_pass http://localhost:5000/airbnb-onepage;
+		proxy_redirect off;
+	}
+
+	location /airbnb-dynamic/number_odd_or_even {
+		proxy_pass http://localhost:5001/number_odd_or_even;
+		proxy_redirect off;
+	}
+
+	location /api {
+		proxy_pass http://localhost:5002;
+		proxy_redirect off;
+	}
+
+	location /static {
+		proxy_pass http://localhost:5003;
+	}
+
+	location / {
+		proxy_pass http://localhost:5003/2-hbnb;
+		proxy_redirect off;
+	}
+
+	location /redirect_me {
+		return 301 https://www.duckduckgo.com;
+	}
+
+	error_page 404 /404.html;
+	location /404 {
+		root /var/www/html;
+		internal;
+	}
+
+}
